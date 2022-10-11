@@ -3,29 +3,18 @@ body {
     padding: 0;
     background: #FFF;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-*:focus{
-    outline-color: red;
-}
-*{
-    outline-color: red;
-}
-
 
 a,
 button {
     transition: all .3s ease-in-out;
-    outline: none!important;
 }
 
 a:hover {
     text-decoration: none;
     cursor: pointer;
-}
-
-a[role="link"]:focus {
-    background-color: palegoldenrod;
-    outline: 1px dotted;
 }
 
 #page-loading-blocs-notifaction {
@@ -42,6 +31,9 @@ a[role="link"]:focus {
     clear: both;
     background: 50% 50% no-repeat;
     padding: 0 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     position: relative;
 }
@@ -73,6 +65,9 @@ a[role="link"]:focus {
 .bg-tr-edge,
 .bg-br-edge,
 .bg-repeat {
+    -webkit-background-size: auto!important;
+    -moz-background-size: auto!important;
+    -o-background-size: auto!important;
     background-size: auto!important;
 }
 
@@ -95,12 +90,16 @@ a[role="link"]:focus {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    background: url("img/texture-paper.webp");
     background-size: 280px 280px;
 }
 
 .b-parallax {
     background-attachment: fixed;
+}
+
+.d-bloc {
+    color: rgba(255, 255, 255, .7);
 }
 
 .d-bloc button:hover {
@@ -133,7 +132,7 @@ a[role="link"]:focus {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: black;
+    color: rgba(255, 255, 255, .6);
 }
 
 .d-bloc .a-btn:hover,
@@ -551,6 +550,8 @@ a[data-lightbox]:hover::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    margin: 0 110px;
 }
 
 a[data-lightbox]:hover img {
@@ -650,7 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: black;
+    color: #575757!important;
 }
 
 .container {
@@ -676,7 +677,7 @@ a {
 }
 
 p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -721,6 +722,9 @@ h3 {
     box-shadow: 0px 0px 0px #000000;
 }
 
+h1 {
+    color: #333333!important;
+}
 
 h4 {
     color: #333333!important;
@@ -753,6 +757,11 @@ h4 {
     padding: 40px 40px 40px 40px;
 }
 
+.new-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .bold-link {
     font-weight: 900;
     text-decoration: underline!important;
@@ -771,7 +780,7 @@ h4 {
 }
 
 .tc-white {
-    color: white;
+    color: white!important;
 }
 
 .btn-atomic-tangerine {
@@ -806,15 +815,15 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/dots-bg.webp");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/lines-h2-bg.webp");
 }
 
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg");
+    background-image: url("img/agence-la-panthere.webp");
 }
 
 .bg-presentation {
@@ -868,7 +877,6 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -1030,8 +1038,4 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
-}
-
-.page2 {
-    color: black;
 }
